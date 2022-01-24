@@ -1,45 +1,37 @@
-With over 20,000 prescription-only FDA approved medications,
-doctors may face a challenge when prescribing medicine to a
-specific patient. Unfortunately, the FDA receives more than
-100,000 declarations of medication errors each year in the United
-States alone \cite{FDA2021}. Modern hospitals use Electronic
-Health Records (EHR) to keep track of everything and deal with
-this complexity \cite{Kim2019}. 
+With over 20,000 prescription-only FDA approved medications, doctors may face a
+challenge when prescribing medicine to a specific patient. Unfortunately, the
+FDA receives more than 100,000 declarations of medication errors each year in
+the United States alone \cite{FDA2021}. Modern hospitals use Electronic Health
+Records (EHR) to keep track of everything and deal with this complexity
+\cite{Kim2019}. 
 
-EHRs are a collection of clinical information gathered
-from health care patients. The mass adoption of such
-systems deliver a large amount of data compiled on a
-patient's demographics, diagnosed conditions, medical
-prescriptions, procedures and any health-related history
+EHRs are a collection of clinical information gathered from health care
+patients. The mass adoption of such systems delivers a large amount of data
+compiled on a patient's visits, such as demographics, diagnosed conditions,
+medical prescriptions, procedures and any health-related history
 \cite{Kim2019}.
 
-%\subsection{Different AI concepts being brought together }
-
-This data provides opportunities for machine learning systems to improve and
+This data provides use cases for machine learning systems to improve and
 automate clinical care practices, for example, early disease detection and
-identifying patients at high risk of severe conditions
-\cite{10.2307/20720782, Juhn2019}.
+identifying patients at high risk of severe conditions \cite{10.2307/20720782,
+Juhn2019}.
 
+A system that recommends a list of medicine based on a
+patient's current state will serve as an essential
+decision-support tool for medical experts to assist with
+drug prescriptions. Recommender Systems (RS) are
+techniques that derive patterns and suggest items to a
+user\cite{Ricci2011}. Providing RSs with EHR data of drugs and patient
+information could result in a system that recommends
+personalised medical results. Existing medicine recommender systems make use of user
+reviews or past user diagnosis \cite{Bhoi2021, Rao2020}. 
 
-A system that suggests a list of medicine based on a patient's current state will serve as an essential decision-support tool for medical experts 
-to assist with patient prescriptions. Recommender Systems (RS) are
-techniques to derive patterns and deal with complex drugs and user
-information to recommend personalised results.
-%TODO: Cite
-
-%\subsection{Research Question}
-
-In this study, we will try to answer the following research question:
-\begin{center}
-\textit{Can a Recommender System predict and suggest a list of personalised medication to
-a patient using information from an EHR.}
-\end{center}
-
-
-%This data provides opportunities for machine learning systems,
-%such as Recommender Systems (RS) to automate a particular
-%hospital procedures. For example, A system that suggests a list
-%of medicine based on a patient's current tate, will serve as an
-%important decision-support tool for medical experts to assist
-%with patient prescriptions \cite{Bhoi2021}.
-
+This study will try
+to answer the following research question:
+\begin{center} \textit{
+Can a recommender system use techniques such as
+collaborative filtering to suggest a list of
+medication personalised to a patient by using
+information from an EHR such as demographics,
+diagnosis, and physiologic data?
+}
