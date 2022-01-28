@@ -9,7 +9,7 @@
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Medicine Recommender System from Electronic Health Records }
+\title{Medicine Recommender System}
 
 \author{\IEEEauthorblockN{Liam Attard}
 	\date{January 2022}
@@ -32,12 +32,27 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \section{Aim and Objectives}
     \input{pages/aimsObjectives.tex}
 
-\section{Background}
+
+\section{Related Work}
     \input{pages/background.tex}
 
+%Health RS play an essential role in research such as food and diet, physical activity and medicine recommendation. Medicine RS solutions classify into either ontology and rule-based approaches or, more recently, machine-learning approaches. Both collaborative filtering (CF) and content-based (CB) techniques have been used for the medicine RS to work. Generally, researchers use EHR gathered from hospitals or medicine ratings and reviews from websites to train their models or algorithms.
+    
+
+%The MIMIC (Medical Information Mart for Intensive Care) is a publicly available EHR dataset under the registration of the university of MIT containing data from patients admitted to the critical care units of the Beth Israel Deaconess Medical Center. There are four versions of this database. The third version contains twenty-six tables, over forty thousand patient records, and around sixty thousand patient visits. Each patient is de-identified and anonymised and contains information about the prescriptions, diagnosis, medications, demographics, doctor's notes and more. We want to use this dataset to train our RS model and intend to combine this dataset with a Drug Interactions dataset such as Drugs.com's system to ensure safe recommendations. Furthermore, this dataset provides the opportunity to build a hybrid recommender system that uses the patient data for CF techniques and doctor's notes for semantic analysis and CB techniques. 
+
+%RS typically uses user rating clicks or explicit feedback to build and grade their system. Since an EHR does not contain such data, we intend to incorporate implicit CF techniques or a hybrid RS to improve existing systems. 
+
+
+%By splitting the dataset into training and testing, we could evaluate our RS model and compare it with existing solutions. Moreover, The existing Drug Interactions evaluation techniques will aid in evaluating the safety of our RS. 
+
 \section{Proposed Idea}
+    \subsection{Dataset}
     \input{pages/proposedIdea.tex}
 
+    \pagebreak
+
+\section{Conclusion}
 
     \pagebreak
 \bibliographystyle{IEEEtran}
