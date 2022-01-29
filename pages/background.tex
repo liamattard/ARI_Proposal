@@ -22,7 +22,7 @@ better query performance over GalenOwl and accommodate a far greater knowledge
 base.
 
 
-Lakkaraju et al.\cite{Lakkaraju2017} model their RS using a decision list
+Lakkaraju et al.\cite{pmlr-v54-lakkaraju17a} model their RS using a decision list
 as a Markov Decision Process (MDP) and Upper Confidence Bound Trees to
 prune the search space efficiently. Their system maps between demographics
 and treatments and try to maximise outcomes, minimise treatment costs and
@@ -63,14 +63,13 @@ content-based filtering (CF), which uses item similarity instead. For
 example, if a user was given medicine A with similar features to medicine
 B, that is recommended. 
 
-
-CF is used by CADRE \cite{Zhang2015}, trained on the Walgreens dataset, which unfortunately
-has been removed. CADRE is a cloud-based RS that performs top-N
-recommendations in three steps. The Data pre-processing part is for
-clustering and cleaning the data, and after CF, tensor decomposition
-addresses the sparsity problem of CF. Unfortunately, this system achieved
-low results; however, they state that future work could use user
-demographics to increase F1, accuracy and recall scores.
+CF is used by CADRE \cite{Zhang2015}, trained on the Walgreens dataset, which unfortunately has been removed. CADRE is a cloud-based RS that performs top-N recommendations in three steps. The data pre-processing
+part is for clustering and cleaning the data, and after CF, tensor
+decomposition addresses the sparsity problem of CF. Unfortunately, this
+system achieved low results; however, not many features were used to train
+the model, and the dataset contains only around 6000 users. They state
+that future work could use user demographics to increase F1, accuracy and
+recall scores.
 
 The Mimic dataset is a publicly available EHR dataset that will be
 described in detail later in section X. Several RS use such datasets like
@@ -85,21 +84,27 @@ cite{Bhoi2021} categorised this approach as an instance-based system that
 only recommends medicine based on current visits and does not consider past
 visits. 
 
+\begin{figure}
+    \includegraphics[width=8.5cm, height = 8cm]{PREMIER.png}
+    \caption{PREMIER's two Stage Recommender System.}
+    \label{one}
+\end{figure}
+
 Recurrent Neural Networks were popular architectural choices for mimic-based RS
 mainly because of their memory ability which is vital for training on user
-visits \cite{Wang}. PREMIER \cite{Bhoi2021} is a two-stage attention-based RS. In the first stage, the
-system uses past diagnoses and procedures and embeds this information into the
-RNN. In the second stage, they combine the second dataset of drug interactions
-to ensure that each recommendation is safe for the user. The system also
-justifies the recommendations by splitting them into two parts; one for the
-diagnosis and one for the procedures, and uses a weight feature to calculate
-the importance. As a result, PREMIER outperforms state-of-the-art medication
-recommendation systems while achieving the best tradeoff between accuracy and
-drug-drug interaction.
+visits \cite{Wang}. PREMIER \cite{Bhoi2021} is a two-stage attention-based
+RS. Figure X shows the architecture with information about each stage. In
+the first stage, the system uses past diagnoses and procedures and embeds
+this information into the RNN. In the second stage, they combine the
+second dataset of drug interactions to ensure that each recommendation is
+safe for the user. The system also justifies the recommendations by
+splitting them into two parts; one for the diagnosis and one for the
+procedures, and uses a weight feature to calculate the importance. As a
+result, PREMIER outperforms state-of-the-art medication recommendation
+systems while achieving the best tradeoff between accuracy and drug-drug
+interaction.  
 
-
-
-Finally, Wang et al. \cite{Wang} proposed a solution that uses Supervised Reinforcement
+Figrue \ref{one} Finally, Wang et al. \cite{Wang} proposed a solution that uses Supervised Reinforcement
 Learning with RNNs on the Mimic Dataset. They contain an off-policy
 actor-critic architecture to discover unique optimal personalised
 treatments and evaluated that their system can decrease the estimated
