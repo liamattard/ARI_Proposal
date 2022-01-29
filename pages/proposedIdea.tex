@@ -3,7 +3,40 @@ recommendation, and RS research is growing fast, especially in the e-commerce
 sector \cite{Tran2021b}. However, the RNN prediction solutions
 like Wang et al. \cite{Wang} and PREMIER \cite{Bhoi2021} only incorporate past diagnoses and past
 procedures. Our proposed solution for this study is to use the vast amount of
-data in EHR like MIMIC in the RS. 
+data in EHR like MIMIC in the RS.  The following describes our proposed ways of
+tackling the objectives.
+
+
+\subsubsection{
+Cold start issues:
+}
+
+The more features the system contains, the more it can handle cold start issues
+for new patients with little data. For example, if the system is trained on the
+age, diagnoses and procedures and a new user only has the first two, the system
+should be capable of recommending the right medicine. 
+
+\subsubsection{
+Finding the best Model
+}
+After splitting the dataset into a training set and a testing set, we would
+like to find the best model that achieves the highest scores.
+
+\subsubsection{
+Adverse side effect prevention
+}
+We can aggregate the EHR dataset with a drug interactions dataset containing
+information about a specific medication and its effects and conflicts with
+other drugs. This combination ensures that any recommended medicine does not
+cause harm or damaging side effects to any patients. 
+
+\subsubsection{
+Important Feature selection
+}
+Choosing the best features from the EHR dataset helps us build an efficient
+model. Our goal is to determine which data hold value for increasing accurate
+predictions.
+
 
 \subsection{
 The Dataset 
@@ -50,3 +83,16 @@ are encoded using international standards such as ICD-9 and ATC classification .
 \end{center}
 
     \end{table}
+
+
+\subsection{Testing and Evaluation}
+Hello World mmn
+
+nmame 
+
+is 
+
+iis s 
+
+
+liam
