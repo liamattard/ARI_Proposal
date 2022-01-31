@@ -1,3 +1,5 @@
+\label{Proposed}
+
 Health RS plays an essential role in food, diet, and physical activity
 recommendation, and RS research is growing fast, especially in the e-commerce
 sector \cite{Tran2021b}. However, the RNN prediction solutions
@@ -37,14 +39,21 @@ Choosing the best features from the EHR dataset helps us build an efficient
 model. Our goal is to determine which data hold value for increasing accurate
 predictions.
 
+\section{Testing and Evaluation}
+
+\label{Testing}
 
 \subsection{
 The Dataset 
 }
+
+
 The MIMIC (Medical Information Mart for Intensive Care) is a publicly
 available EHR dataset under the registration of the university of MIT
 containing data from patients admitted to the critical care units of the Beth
 Israel Deaconess Medical Center \cite{Johnson2016}.
+Several RS use such datasets like LEAP, PREMIER and Wang
+et al.'s system \cite{Wang}. 
 
 There are four versions of this database, and after applying, we have been
 given access to MIMIC III and MIMIC IV. The third version contains twenty-six
@@ -85,19 +94,23 @@ are encoded using international standards such as ICD-9 and ATC classification .
     \end{table}
 
 
-\subsection{Testing and Evaluation}
+\subsection{Evaluation Methodology}
 
-There are three main things to test for evaluating the RS, performance,
+There are three main things to test for evaluating the RS; performance,
 accuracy scores and drug interactions tests. These three measures will
 ensure that our system would recommend good medicine as fast as possible
 whilst also ensuring the patient's safety. We will also compare our
-system's safety with other RS using standard drug interactions metrics.
+system's safety with other RS using standard drug
+interactions metrics. We could also package the system in
+an application and present sample use cases to
+demonstrate our system. 
 
-We will also split the dataset into training, testing, and validation sets
+
+\subsection{Evaluation Metrics}
+
+We will split the dataset into training, testing, and validation sets
 to calculate additional evaluation metrics such as the F1 score,
 precision,Jaccard, Root-mean-square deviation, and Mean Absolute Errors. Doing so
 will allow us to compare our system with existing systems that use the
-MIMIC dataset. We could also package the system in an application and
-present sample use cases to demonstrate our system. 
-
+MIMIC dataset. 
 

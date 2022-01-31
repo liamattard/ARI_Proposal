@@ -1,3 +1,5 @@
+\label{Background}
+
 This section briefly explains the medicine RS research area, lists similar
 systems, and explains what technologies their researchers used to build
 them. When available, we also try to look into their solutions for the
@@ -6,8 +8,11 @@ research into two categories, described in the following subsections.
 
 \subsection{Ontology and Rule-Based Systems}
 
-These systems typically rely on a set of rules, referred to as a knowledge
+Rule-Based systems typically rely on a set of rules, referred to as a knowledge
 base, that mimic the logic of a medical expert \cite{Stark2019}.
+Such systems utilise approaches ranging from Semantic Web
+Technologies \cite{Doulaverakis2014, Rodriguez2009} to other text-based
+technologies \cite{Hamed2012}.
 
 GalenOWL \cite{Doulaverakis2012} recommends drugs to patients based on the
 user's diseases, allergies and drug interactions. The system stores the
@@ -54,26 +59,36 @@ without introducing conflict \cite{Bhoi2021}.
 Machine learning-based Approaches
 }
 
-There are two main ways of approaches to building Machine-Learning based
-RS. The first method is using Collaborative Filtering (CF). Using this
-approach, an RS recommends items to a user based on the choices of similar
-users. The algorithm measures user similarity from features like
-demographics, diagnosis or prescriptions. Another approach is using
-content-based filtering (CF), which uses item similarity instead. For
-example, if a user was given medicine A with similar features to medicine
-B, that is recommended. 
 
-CF is used by CADRE \cite{Zhang2015}, trained on the Walgreens dataset, which unfortunately has been removed. CADRE is a cloud-based RS that performs top-N recommendations in three steps. The data pre-processing
-part is for clustering and cleaning the data, and after CF, tensor
-decomposition addresses the sparsity problem of CF. Unfortunately, this
-system achieved low results; however, not many features were used to train
-the model, and the dataset contains only around 6000 users. They state
-that future work could use user demographics to increase F1, accuracy and
-recall scores.
+There are two main ways of approaches to building
+Machine-Learning based RS. The first method is using
+Collaborative Filtering (CF). CF is used by CADRE
+\cite{Zhang2015}, trained on the Walgreens dataset, which
+unfortunately has been removed. CADRE is a cloud-based RS
+that performs top-N recommendations in three steps. The
+data pre-processing part is for clustering and cleaning
+the data, and after CF, tensor decomposition addresses
+the sparsity problem of CF. Unfortunately, this system
+achieved low results; however, not many features were
+used to train the model, and the dataset contains only
+around 6000 users. They state that future work could use
+user demographics to increase F1, accuracy and recall
+scores. Using this approach, an RS recommends items to a
+user based on the choices of similar users. The algorithm
+measures user similarity from features like demographics,
+diagnosis or prescriptions. 
 
-The Mimic dataset is a publicly available EHR dataset that will be
-described in detail later in section X. Several RS use such datasets like
-LEAP, PREMIER and Wang et al.'s system. 
+Another approach is using content-based filtering (CB),
+which uses item similarity instead. For example, if a
+user was given medicine A with similar features to
+medicine B, that is recommended. Garg et al. \cite{Garg}
+creates a drug RS based on the reviews left on each drug
+from the drugs.com dataset. They used various
+vectorization processes like Bow and Word2Vec to assist
+the algorithm in recommending the top medicine for a
+given disease. The final model using Linear Support
+Vector Classification achieved 95\% accuracy.
+
 
 
 Zhang et al. \cite{LEAP} created LEAP , an end-to-end learning algorithm that uses a
@@ -86,11 +101,11 @@ visits.
 
 \begin{figure}
     \includegraphics[width=8.5cm, height = 7.5cm]{PREMIER.png}
-    \caption{PREMIER's two Stage Recommender System.}
+    \caption{PREMIER's two Stage Recommender System \cite{Bhoi2021 as}.}
     \label{one}
 \end{figure}
 
-Recurrent Neural Networks were popular architectural choices for mimic-based RS
+Recurrent Neural Networks are a popular architectural choice for mimic-based RS
 mainly because of their memory ability which is vital for training on user
 visits \cite{Wang}. PREMIER \cite{Bhoi2021} is a two-stage attention-based
 RS. Figure \ref{one} shows the architecture with information about each stage. In
