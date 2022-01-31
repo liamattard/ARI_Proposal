@@ -21,8 +21,14 @@ should be capable of recommending the right medicine.
 \subsubsection{
 Finding the best Model
 }
-After splitting the dataset into a training set and a testing set, we would
-like to find the best model that achieves the highest scores.
+After splitting the dataset into a training set and a
+testing set, we would like to find the best model that
+achieves the highest scores using libraries like Pytorch
+to build our model. We could also compare then replace
+our model with sequence modelling techniques like
+transformers to see if the system improves. For example,
+PREMIER \cite{Bhoi2021} replaced the RNN with BERT, and
+their system improved from 78\% to 82\% accuracy.
 
 \subsubsection{
     Preventing adverse side effects from recommendations
@@ -30,14 +36,20 @@ like to find the best model that achieves the highest scores.
 We can aggregate the EHR dataset with a drug interactions dataset containing
 information about a specific medication and its effects and conflicts with
 other drugs. This combination ensures that any recommended medicine does not
-cause harm or damaging side effects to any patients. 
+cause harm or damaging side effects to any patients.
+PREMIER \cite{Bhoi2021} combined the MIMIC dataset with a
+Drug interactions dataset to check the final recommended
+results.
 
 \subsubsection{
     Selecting the best features from the dataset
 }
 Choosing the best features from the EHR dataset helps us build an efficient
 model. Our goal is to determine which data hold value for increasing accurate
-predictions.
+predictions. For example, most systems only make use of
+diagnoses and procedures. We would like to check whether
+demographics and other health-related data like blood
+pressure could affect performance.
 
 \section{Testing and Evaluation}
 
